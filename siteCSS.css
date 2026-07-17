@@ -1,0 +1,141 @@
+body{
+    background-color: rgb(100, 66, 21);
+    background-image: url(backgroundLivros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.titulo{
+    color: rgb(255, 255, 255);
+    background-color: rgb(165, 129, 81);
+    font-size: 25px;
+    border-radius: 10px;
+    border-color: rgb(255, 174, 0);
+    border-style: solid;
+    text-align: center;
+}
+
+.barraDePesquisa{
+    display: flex;
+    margin-top: 40px;
+    color: rgb(255, 255, 255);
+    gap: 10px;
+}
+
+input{
+    border-radius: 4px;
+    border-color: rgb(255, 174, 0);
+    background-color: rgb(100, 66, 21);
+    border-width: 3px;
+    border-style: solid;
+}
+
+::placeholder{
+    color: white;
+}
+
+.listaTipo{
+    color: white;
+    border-radius: 4px;
+    border-color: rgb(255, 174, 0);
+    background-color: rgb(100, 66, 21);
+    border-width: 3px;
+    border-style: solid;
+}
+
+.procuraPorTipo{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.opcoesTipo{
+    position: absolute;
+    top: calc(100% + 8px); /* Posiciona o menu exatamente 8px abaixo do botão */
+    left: 0;
+    width: 100%;
+
+    opacity: 0;             /* Torna o menu completamente invisível */
+    visibility: hidden;     /* Impede que o utilizador clique acidentalmente nas opções invisíveis */
+    transform: translateY(-10px) scale(0.95); /* Desloca o menu ligeiramente para cima e encolhe */
+    
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+
+    color: white;
+    border-radius: 4px;
+    border-color: rgb(255, 174, 0);
+    background-color: rgb(100, 66, 21);
+    border-width: 3px;
+    border-style: solid;
+}
+
+.opcoesTipo.aberto{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1); /* O menu volta ao seu tamanho normal e desce para a posição correta */
+    
+}
+
+.opcao-customizada{
+    color: white;
+    border-color: rgb(255, 174, 0);
+    background-color: rgb(100, 66, 21);
+    border-style: solid;
+}
+
+.listaTipo.ativo .seta{
+    transform: rotate(180deg);
+}
+
+.balcao{
+    margin-top: 10px;
+    background-color: rgb(192, 149, 94);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(255, 174, 0);
+}
+
+img{
+    width: 250px;
+}
+
+.bordaLivro{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(100, 66, 21);
+    border-width: 40px;
+    margin-top: 130px;
+    margin-right: 130px;
+    margin-left: 130px;
+    margin-bottom: 15px;
+}
+
+.livro{ /* classe necessária para definir as propriedades da imagem da capa dos livros*/
+    display: flex;
+    align-items: flex-start; /*comando novo: irá alinhar os itens pelo topo da div*/
+    gap: 20px; /*comando novo: margem entre o texto e a imagem da capa*/
+    text-align: justify;
+    padding: 30px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: rgb(255, 174, 0);
+}
+
+.infoLivro{
+    background-color: rgb(100, 66, 21);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: bisque;
+    padding: 10px;
+}
+
+.infoLivro p{
+    color: white
+}
+
+div p:nth-of-type(1){
+    text-align: center;
+}
